@@ -4,6 +4,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.openmrs.module.appframework.domain.validators.ValidationErrorMessages;
+import org.openmrs.module.appframework.workflow.WorkflowDescriptor;
 
 import java.util.Map;
 
@@ -18,6 +19,9 @@ public class Extension implements Comparable<Extension> {
 	
 	@JsonProperty
 	protected String extensionPointId;
+
+    @JsonProperty
+    protected WorkflowDescriptor workflowDescriptor;
 	
 	@JsonProperty
 	protected String type;

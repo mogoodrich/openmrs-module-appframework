@@ -98,7 +98,16 @@
             	<scope>test</scope>
         	</dependency>
 
-		</dependencies>
+            <!--  include groovy, but mark as provided since it is included with the logic module -->
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy</artifactId>
+                <version>1.7.6</version>
+                <type>jar</type>
+                <scope>provided</scope>
+            </dependency>
+
+        </dependencies>
 	</dependencyManagement>
 
 	<build>
